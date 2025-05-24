@@ -1,0 +1,19 @@
+# Netlify configuration file
+# Place this file in your project root directory
+
+[build]
+  # Build command - builds both frontend and backend
+  command = "npm run build"
+  
+  # Publish directory - where your built frontend files are
+  publish = "dist/public"
+
+# Redirect all routes to index.html for client-side routing (SPA)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Optional: Set Node.js version
+[build.environment]
+  NODE_VERSION = "18"
